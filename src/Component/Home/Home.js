@@ -16,10 +16,10 @@ const Home = () => {
     useEffect(() => {
         let url = "";
         if(search != ""){
-            url = `https://restcountries.eu/rest/v2/name/${search}`;
+            url = `https://restcountries.com/v3.1/name/${search}`;
         }
         else{
-            url = 'https://restcountries.eu/rest/v2/all';
+            url = 'https://restcountries.com/v3.1/all';
         }
         fetch(url)
         .then(res => res.json())
