@@ -12,7 +12,7 @@ const Home = () => {
             setSearch(x);
         }
     }
-
+ 
     useEffect(() => {
         let url = "";
         if(search != ""){
