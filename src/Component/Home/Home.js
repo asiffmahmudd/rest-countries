@@ -23,7 +23,10 @@ const Home = () => {
         }
         fetch(url)
         .then(res => res.json())
-        .then(data => setCountry(data))
+        .then(data => {
+            data.map(x => console.log(x.capital))
+            setCountry(data)
+        })
     },[search]);
 
     const handleSearch = (event) => {
@@ -50,7 +53,7 @@ const Home = () => {
                         </div>
                     </div>
                     {
-                        country.length ? country.map(cn => <Country key={cn.name} country={cn}></Country>) : <div className="col-md-12"><h1 className="text-warning text-center">Country Not Found</h1></div>
+                        country.length ? country.map(cn => <Country key={cn.name["common"]} country={cn}></Country>) : <div className="col-md-12"><h1 className="text-warning text-center">Country Not Found</h1></div>
                     }
                 </div>
             </div>
