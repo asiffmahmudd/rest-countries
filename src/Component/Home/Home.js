@@ -8,14 +8,14 @@ const Home = () => {
 
     const searchCountry = () => {
         const x = document.getElementById("userInput").value;
-        if(x != ""){
+        if(x !== ""){
             setSearch(x);
         }
     }
  
     useEffect(() => {
         let url = "";
-        if(search != ""){
+        if(search !== ""){
             url = `https://restcountries.com/v3.1/name/${search}`;
         }
         else{
