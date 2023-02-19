@@ -15,7 +15,7 @@ const CountryDetails = () => {
             console.log(data);
             setDetails(data[0])
         });
-    }, []);
+    }, [name]);
     
     const {flags, population, capital, region, subregion} = details;
     return (

@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './Country.css';
 
 const Country = (props) => {
@@ -13,7 +12,7 @@ const Country = (props) => {
     return (
         <div className="col-md-4 mt-3">
             <div className="card" style={{width: "18rem"}}>
-                <img className="card-img-top" src={flags["png"]} alt="Country Image" />
+                <img className="card-img-top" src={flags["png"]} alt="Country flag" />
                 <div className="card-body">
                     <h5 className="card-title">{name["common"]}</h5>
                     {
